@@ -1,13 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+<body class="bg-slate-200">
+
+<header class="bg-blue-400">
+<nav class="flex justify-between items-center w-[100%] mx-auto">
+    <div>
+        <img src="logo.gif" class="w-[40%]" alt="logo">
+    </div>
+        <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                <li>
+                    <a class="hover:text-gray-500" href="#">Home</a>
+                </li>
+
+                <li>
+                    <a class="hover:text-gray-500" href="#">About Us</a>
+                </li>
+
+                <li>
+                    <a class="hover:text-gray-500" href="#">Contact Us</a>
+                </li>
+
+                <li>
+                    <a class="hover:text-gray-500" href="#">Help</a>
+                </li>
+
+                <li>
+                    <a class="hover:text-gray-500" href="#">Add</a>
+                </li>
+            </ul>
+
+        </div>
+    <div class="flex items-center gap-6">
+        <button class="bg-amber-400 text-white px-5 py-2 rounded-full hover:bg-amber-700">Browse</button>
+        <ion-icon onclick="onToggleMenu(this)"  name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+    </div>
+</nav>
+
+</header>
+
+<script>
+
+    const navlinks=document.querySelector(".nav-links")
+    function onToggleMenu(event){
+        event.name=event.name === `menu` ? `close` :`menu`
+        navlinks.classList.toggle(`top-[9%]`)
+
+    }
+</script>
+
+
+</body>
 </html>
